@@ -47,4 +47,4 @@ while will_continue:
     else:
         will_continue = False
         print(logo)
-        print(f"Sorry thay was wrong, Your final score is {count}")
+        print(f"Sorry that was wrong, Your final score is {count}")
