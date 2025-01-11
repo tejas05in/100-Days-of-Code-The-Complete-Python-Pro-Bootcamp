@@ -38,7 +38,7 @@ while will_continue:
     print(f"Against B: {B["name"]}, a {B["description"]}, from {B["country"]}.")
     choice = input("Who has more followers? Type 'A' or 'B': ")
 
-    os.system('clear')
+    os.system('cls')
 
     result = compare_choice(choice)
     if result:
