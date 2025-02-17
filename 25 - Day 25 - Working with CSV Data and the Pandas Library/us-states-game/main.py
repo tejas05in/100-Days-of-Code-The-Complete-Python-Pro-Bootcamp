@@ -25,6 +25,8 @@ while game_on and len(guessed_states) <50:
                                     prompt="What is another state name? or Type Exit to quit!").title()
     if answer_state == "Exit":
         game_on = False
+        missing_states = [state for state in all_states if state not in guessed_states]
+        pd.Series(missing_states).to_csv("States_to_learn.csv")
 
     elif answer_state in all_states:
         guessed_states.append(answer_state)
@@ -36,7 +38,3 @@ while game_on and len(guessed_states) <50:
         print("Sorry, state not found. try again.")
 else:
     draw(0,0,"Congratulations, you won!")
-
-# States to learn.csv
-to_learn = pd.Series(list(set(all_states)-set(guessed_states)))
-to_learn.to_csv("States_to_learn.csv")
