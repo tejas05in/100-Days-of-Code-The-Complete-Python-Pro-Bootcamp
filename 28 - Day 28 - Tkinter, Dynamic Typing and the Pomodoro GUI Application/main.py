@@ -12,6 +12,8 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
 timer = None
+
+
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
     window.after_cancel(timer)
@@ -56,7 +58,6 @@ def count_down(count):
         check_mark.config(text=marks)
 
 
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("POMODORO")
@@ -78,7 +79,7 @@ canvas.grid(row=1, column=1)
 
 start_button = Button(text="Start", command=start_timer, highlightthickness=0)
 start_button.grid(row=2, column=0)
-reset_button = Button(text="Reset",command=reset_timer, highlightthickness=0)
+reset_button = Button(text="Reset", command=reset_timer, highlightthickness=0)
 reset_button.grid(row=2, column=2)
 check_mark = Label(fg=GREEN, bg=YELLOW)
 check_mark.grid(row=3, column=1)
